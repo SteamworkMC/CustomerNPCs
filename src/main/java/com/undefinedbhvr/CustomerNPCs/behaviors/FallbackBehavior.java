@@ -32,7 +32,7 @@ import java.util.Map;
 public class FallbackBehavior extends AbstractBehavior {
 
     @Override
-    public AbstractBehavior create(Object... args) {
+    public AbstractBehavior create(String... args) {
         return new FallbackBehavior();
     }
 

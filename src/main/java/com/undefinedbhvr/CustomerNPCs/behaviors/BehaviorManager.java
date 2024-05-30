@@ -6,8 +6,11 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Behaviors are unused for now. V1 will operate on mob goals with a simple editor.
+ */
 public class BehaviorManager {
-    public static AbstractBehavior createFromRegistry(ResourceLocation location, Object... args) {
+    public static AbstractBehavior createFromRegistry(ResourceLocation location, String... args) {
         Class<? extends AbstractBehavior> behaviorClass = CustomerNPCs.BEHAVIORS.getRegistry()
                 .get()
                 .getOptional(location)
