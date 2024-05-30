@@ -7,7 +7,7 @@ import java.util.Map;
  */
 public class ChoiceBehavior extends AbstractBehavior {
     @Override
-    public AbstractBehavior create(Object... args) {
+    public AbstractBehavior create(String... args) {
         return new ChoiceBehavior();
     }
 

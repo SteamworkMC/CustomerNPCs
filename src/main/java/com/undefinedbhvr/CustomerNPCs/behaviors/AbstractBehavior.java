@@ -13,10 +13,12 @@ import java.util.Map;
  * The tick method is called every entity tick for the entity making use of it.
  *
  * We provide a "create" method in order to create the behavior after its added to the registry.
+ * However, all the data passed into create is in the form of strings in an array. This is because
+ * the system gets its creation data from a minecraft gui and I do not want to have to serialize.
  */
 
 public abstract class AbstractBehavior {
-    public abstract AbstractBehavior create(Object... args);
+    public abstract AbstractBehavior create(String... args);
     final ArrayList<AbstractBehavior> children = new ArrayList<>();
     // Ticks only care about the blackboard
     public BehaviorStatus tick(Map<String, Object> blackboard ) {

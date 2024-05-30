@@ -29,7 +29,7 @@ import java.util.Map;
 public class SequenceBehavior extends AbstractBehavior {
 
     @Override
-    public AbstractBehavior create(Object... args) {
+    public AbstractBehavior create(String... args) {
         return new SequenceBehavior();
     }
 
